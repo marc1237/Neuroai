@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "username": "Mark06",
+      "password_hash": "scrypt:32768:8:1$w5suScnJT4nXgbHK$b28edb0c93de09b856ca9e3b293ea1b8155f24b8530bfd9c39143d33aedcdffad55378a2567b856ba5b64c5a33f034d424fb9814ab923186981d8da0b9f09c21"
+    },
+    {
+      "username": "admin",
+      "name": "admin",
+      "email": "",
+      "is_admin": true,
+      "password_hash": "scrypt:32768:8:1$AuAK4UAXdIHMhXXR$c19891685d8f7b5cfef15c15f4cbf75a3d61c94ffc92993d369d240bac1e07023e7452b79be33e767fc7be5caf68e508cb0bdda18ba81a698266102b976c1451"
+    }
+  ]
+}

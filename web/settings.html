@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Neuro AI Studio - Impostazioni</title>
+    <link rel="icon" href="/favicon.ico?v=1" sizes="any" />
+    <link rel="icon" href="/Ico/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/Ico/apple-touch-icon.png" />
+    <link rel="manifest" href="/Ico/site.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-grid"></div>
+
+    <div class="admin">
+      <div class="admin-card">
+        <div class="admin-header">
+          <div>
+            <div class="brand-title" data-i18n="settings.title">Impostazioni</div>
+            <div class="brand-subtitle" data-i18n="settings.subtitle">Profilo, privacy e preferenze</div>
+          </div>
+          <div class="admin-actions">
+            <a class="btn btn-ghost" href="/" data-i18n="settings.back">Torna alla chat</a>
+            <button class="btn btn-soft" id="logoutBtn" data-i18n="settings.logout">Logout</button>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title" data-i18n="settings.profile">Profilo</div>
+          <label class="field">
+            <span data-i18n="settings.name">Nome completo</span>
+            <input id="nameInput" type="text" />
+          </label>
+          <label class="field">
+            <span data-i18n="settings.email">Email</span>
+            <input id="emailInput" type="email" />
+          </label>
+          <button class="btn btn-primary" id="saveProfileBtn" data-i18n="settings.save">Salva profilo</button>
+          <div class="login-hint" id="profileHint"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title" data-i18n="settings.privacy">Privacy</div>
+          <div class="panel-text" data-i18n="settings.privacyText">
+            I dati sono salvati localmente sul server. Nessuna condivisione automatica.
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title" data-i18n="settings.chatPrefs">Preferenze chat</div>
+          <label class="field">
+            <span data-i18n="settings.responseStyle">Lunghezza risposte</span>
+            <select id="responseStyleSelect">
+              <option value="adaptive">Adattiva</option>
+              <option value="brief">Breve</option>
+              <option value="detailed">Approfondita</option>
+            </select>
+          </label>
+          <label class="field">
+            <span data-i18n="settings.safetyBanner">Banner sicurezza</span>
+            <label class="switch">
+              <input type="checkbox" id="safetyBannerSelect" />
+              <span class="slider"></span>
+            </label>
+          </label>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title" data-i18n="settings.appearance">Aspetto</div>
+          <label class="field">
+            <span data-i18n="settings.theme">Tema</span>
+            <select id="themeSelect">
+              <option value="warm">Caldo (studio)</option>
+              <option value="neutral">Neutro</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title" data-i18n="settings.language">Lingua</div>
+          <label class="field">
+            <span data-i18n="settings.language.label">Lingua interfaccia</span>
+            <select id="languageSelect">
+              <option value="it">Italiano</option>
+              <option value="en">English</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title" data-i18n="settings.accessibility">Accessibilita</div>
+          <label class="field">
+            <span data-i18n="settings.largeText">Testo grande</span>
+            <label class="switch">
+              <input type="checkbox" id="largeTextSelect" />
+              <span class="slider"></span>
+            </label>
+          </label>
+          <label class="field">
+            <span data-i18n="settings.reduceMotion">Riduci animazioni</span>
+            <label class="switch">
+              <input type="checkbox" id="reduceMotionSelect" />
+              <span class="slider"></span>
+            </label>
+          </label>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title" data-i18n="settings.notifications">Notifiche</div>
+          <label class="field">
+            <span data-i18n="settings.emailNotif">Email di riepilogo</span>
+            <label class="switch">
+              <input type="checkbox" id="emailNotifSelect" />
+              <span class="slider"></span>
+            </label>
+          </label>
+          <div class="panel-text" data-i18n="settings.emailNote">
+            Funzione locale: salva solo la preferenza.
+          </div>
+          <button class="btn btn-soft" id="testEmailBtn" data-i18n="settings.testEmail">Invia email di test</button>
+          <div class="login-hint" id="emailHint"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="settings.js"></script>
+  </body>
+</html>

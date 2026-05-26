@@ -1,0 +1,12 @@
+{
+  "active_assistant_id": "assistant-1",
+  "assistants": [
+    {
+      "id": "assistant-1",
+      "name": "Arianna",
+      "gender": "F",
+      "avatar_url": "/assets/avatar-default.svg",
+      "prompt_addendum": ""
+    }
+  ]
+}

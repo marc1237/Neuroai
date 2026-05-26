@@ -1,0 +1,12 @@
+{
+  "sessions": [
+    {
+      "id": "session-1",
+      "title": "ciaoo come stai sono Marco, tu come ti c",
+      "created_at": "2026-04-06T10:21:00.846978Z",
+      "updated_at": "2026-04-06T10:25:01.287307Z",
+      "messages": [],
+      "assistant_id": "assistant-1"
+    }
+  ]
+}

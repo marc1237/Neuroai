@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Neuro AI Studio - Admin</title>
+    <link rel="icon" href="/favicon.ico?v=1" sizes="any" />
+    <link rel="icon" href="/Ico/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/Ico/apple-touch-icon.png" />
+    <link rel="manifest" href="/Ico/site.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-grid"></div>
+
+    <div class="admin">
+      <div class="admin-card">
+        <div class="admin-header">
+          <div>
+            <div class="brand-title">Pannello Admin</div>
+            <div class="brand-subtitle">
+              Controllo istruzioni AI e stato utenti
+            </div>
+          </div>
+          <a class="btn btn-ghost" href="/">Torna alla chat</a>
+        </div>
+
+        <div class="admin-stats">
+          <div class="stat">
+            <div class="stat-label">Utenti registrati</div>
+            <div class="stat-value" id="totalUsers">0</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Utenti attivi (15 min)</div>
+            <div class="stat-value" id="activeUsers">0</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title">Istruzioni AI (globali)</div>
+          <label class="field">
+            <span>System prompt</span>
+            <textarea id="adminPrompt" rows="10"></textarea>
+          </label>
+          <button class="btn btn-primary" id="savePromptBtn">
+            Salva istruzioni
+          </button>
+          <div class="login-hint" id="adminHint"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title">SMTP Email (admin)</div>
+          <label class="field">
+            <span>Host SMTP</span>
+            <input id="smtpHost" type="text" placeholder="smtp.gmail.com" />
+          </label>
+          <label class="field">
+            <span>Porta</span>
+            <input id="smtpPort" type="number" placeholder="587" />
+          </label>
+          <label class="field">
+            <span>Utente</span>
+            <input id="smtpUser" type="text" placeholder="nome@email.com" />
+          </label>
+          <label class="field">
+            <span>Password</span>
+            <input id="smtpPass" type="password" />
+          </label>
+          <label class="field">
+            <span>Mittente</span>
+            <input id="smtpFrom" type="text" placeholder="nome@email.com" />
+          </label>
+          <label class="field">
+            <span>TLS</span>
+            <select id="smtpTls">
+              <option value="true">Si</option>
+              <option value="false">No</option>
+            </select>
+          </label>
+          <button class="btn btn-soft" id="saveSmtpBtn">Salva SMTP</button>
+          <div class="login-hint" id="smtpHint"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

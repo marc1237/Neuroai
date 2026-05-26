@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Neuro AI Studio</title>
+    <link rel="icon" href="/favicon.ico?v=1" sizes="any" />
+    <link rel="icon" href="/Ico/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/Ico/apple-touch-icon.png" />
+    <link rel="manifest" href="/Ico/site.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-grid"></div>
+
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="logo">N</div>
+          <div class="brand-text">
+            <div class="brand-title">Neuro AI</div>
+          <div class="brand-subtitle" data-i18n="brand.subtitle">Studio Psicologo</div>
+          </div>
+        </div>
+
+        <div class="user-card" id="userCard">
+          <div class="user-avatar" id="userAvatar">U</div>
+          <div class="user-info">
+            <div class="user-name" id="userName">Utente</div>
+            <div class="user-email" id="userEmail">email@example.com</div>
+          </div>
+        </div>
+
+        <div class="assistant-card" id="assistantCard">
+          <img id="assistantAvatar" src="/assets/avatar-default.svg" alt="Assistant avatar" />
+          <div class="assistant-info">
+            <div class="assistant-name" id="assistantName">Assistente</div>
+            <div class="assistant-meta" id="assistantGender">Genere: N</div>
+          </div>
+        </div>
+
+        <button class="btn btn-primary full" id="newChatBtn" data-i18n="chat.new">+ Nuova chat</button>
+
+        <div class="panel panel-list">
+          <div class="panel-title" data-i18n="chat.saved">Chat salvate</div>
+          <div class="session-list" id="sessionList"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title" data-i18n="tools.title">Strumenti</div>
+          <a class="btn btn-ghost full" href="/settings" data-i18n="tools.settings">Impostazioni</a>
+          <button class="btn btn-soft full" id="clearBtn" data-i18n="tools.clear">Pulisci chat</button>
+          <button class="btn btn-soft full" id="exportBtn" data-i18n="tools.export">Esporta JSON</button>
+          <button class="btn btn-ghost full" id="logoutBtn" data-i18n="tools.logout">Logout</button>
+        </div>
+
+        <div class="panel panel-muted">
+          <div class="panel-title" data-i18n="privacy.title">Privacy</div>
+          <div class="panel-text" data-i18n="privacy.text">
+            Salvataggio locale sul server. Nessuna condivisione automatica.
+          </div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div class="context">
+            <div class="context-title" id="activeChatTitle">Chat clinica</div>
+            <div class="context-subtitle" data-i18n="top.subtitle">
+              Esperienza simile alla terapia, ma non sostituisce lo psicologo/a
+            </div>
+          </div>
+          <div class="badges">
+            <span class="badge" data-i18n="badge.private">Riservato</span>
+            <span class="badge ghost" data-i18n="badge.local">Locale</span>
+          </div>
+        </header>
+
+        <section class="chat" id="chat">
+          <div class="message assistant">
+            <div class="avatar">AI</div>
+            <div class="bubble">
+              <div class="title">Benvenuto</div>
+              <div class="text" data-i18n="welcome.text">
+                Scrivi qui sotto e io rispondero con un linguaggio clinicamente
+                ordinato. Puoi modificare le istruzioni AI dal pannello admin.
+              </div>
+              <div class="note" data-i18n="welcome.note">
+                Nota: questo strumento supporta il lavoro clinico, non
+                sostituisce il giudizio professionale.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="composer">
+          <form id="composerForm">
+            <div class="input-wrap">
+              <button type="button" class="btn btn-ghost mic" id="micBtn" title="Parla">
+                Mic
+              </button>
+              <textarea
+                id="messageInput"
+                placeholder="Scrivi un messaggio clinico, una sintesi o una domanda..."
+                data-i18n-placeholder="input.placeholder"
+                rows="3"
+              ></textarea>
+              <button type="submit" class="btn btn-primary" data-i18n="input.send">Invia</button>
+            </div>
+          </form>
+          <div class="helper" id="safetyBanner" data-i18n="safety.banner">
+            L'AI non e un servizio di emergenza. In caso di urgenza segui i protocolli locali.
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
